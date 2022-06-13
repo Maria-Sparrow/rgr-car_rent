@@ -1,3 +1,4 @@
+from sorting import DefaultSort, SortByPrice, SortByYear, Sorting
 from constants import *
 import string
 import random
@@ -11,38 +12,52 @@ def year_comparator(element):
     return element['year']
 
 
-def filter_cars(brand: str, year: str, price: str, cars: list):
+# def filter_cars(brand: str, year: str, price: str, cars: list):
+#     if len(cars) == 0:
+#         return []
+
+#     if price == price_constants['asc']:
+#         cars.sort(key=price_comparator)
+#     elif price == price_constants['desc']:
+#         cars.sort(key=price_comparator, reverse=True)
+
+#     if year == year_constants['asc']:
+#         cars.sort(key=year_comparator)
+#     elif year == year_constants['desc']:
+#         cars.sort(key=year_comparator, reverse=True)
+
+#     return cars
+
+by_default = DefaultSort()
+by_price = SortByPrice()
+by_year = SortByYear()
+
+
+def filter_cars(price: str, year: str, cars: list):
+    sorting = Sorting()
     if len(cars) == 0:
         return []
 
-    if price == price_constants['asc']:
-        cars.sort(key=price_comparator)
-    elif price == price_constants['desc']:
-        cars.sort(key=price_comparator, reverse=True)
+    if price in ("ascending", "descending"):
+        sorting.comparator = by_price
+        cars = sorting.sort(cars, price == "ascending")
+    elif year in ("ascending", "descending"):
+        sorting.comparator = by_year
+        cars = sorting.sort(cars, year == "ascending")
+    else:
+        cars = sorting.sort(cars, True)
+    
+    # if price == price_constants['asc']:
+    #     cars.sort(key=price_comparator)
+    # elif price == price_constants['desc']:
+    #     cars.sort(key=price_comparator, reverse=True)
 
-    if year == year_constants['asc']:
-        cars.sort(key=year_comparator)
-    elif year == year_constants['desc']:
-        cars.sort(key=year_comparator, reverse=True)
+    # if year == year_constants['asc']:
+    #     cars.sort(key=year_comparator)
+    # elif year == year_constants['desc']:
+    #     cars.sort(key=year_comparator, reverse=True)
 
     return cars
-
-
-def filter_dwellings(price: str, year: str, dwellings: list):
-    if len(dwellings) == 0:
-        return []
-
-    if price == price_constants['asc']:
-        dwellings.sort(key=price_comparator)
-    elif price == price_constants['desc']:
-        dwellings.sort(key=price_comparator, reverse=True)
-
-    if year == year_constants['asc']:
-        dwellings.sort(key=year_comparator)
-    elif year == year_constants['desc']:
-        dwellings.sort(key=year_comparator, reverse=True)
-
-    return dwellings
 
 
 def can_user_be_logged_in(username: str, password: str, users: list):

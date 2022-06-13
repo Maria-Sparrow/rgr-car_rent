@@ -1,5 +1,5 @@
 
-class Dwelling:
+class Car:
 
     def __init__(self, img, title: 'title', brand="zaporozhec", year = 1990, price_in_USD=0):
         self.img = img
