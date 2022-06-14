@@ -224,7 +224,7 @@ def register_user():
         result = exists
     else:
         result = True
-        logged_in_value = generate_logged_in_value(data['username']);
+        logged_in_value = generate_logged_in_value(data['username'])
         new_user = RestUser(data['username'], data['real_name'], data['phone'], data['password'], logged_in_value)
         db.session.add(new_user)
         db.session.commit()
