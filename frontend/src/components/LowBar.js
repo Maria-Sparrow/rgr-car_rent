@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAccess } from '../redux/accessSlice';
 import { registerDeal } from '../api/api';
+// import { addToDealAsync } from "../redux/dealSlice";
 
 
 

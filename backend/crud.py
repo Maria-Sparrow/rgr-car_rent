@@ -247,22 +247,6 @@ def check_logged_user_in():
     return jsonify({'result': result})
 
 
-# @app.route("/user/check_user_id", methods=["POST"])
-# @cross_origin()
-# def check_user_id():
-#     userr_id = request.json['id']
-#     if userr_id is None:
-#         result = False
-#     else:
-#         users = RestUser.query.all()
-#         users_schema = UserShema(many=True, only=['id'])
-#         users = users_schema.dump(users)
-#         result = did_user_login(userr_id, users)
-#         if result:
-#             user_id = userr_id
-#
-#     return jsonify({'result': user_id})
-
 @app.route("/deal", methods=["GET"])
 @cross_origin()
 def get_deals():

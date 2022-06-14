@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {ContainerStyle, MarginTopFromHeaderStyle} from "../styles/General.styled";
 import {ErrorMessage, Form, Formik, Field} from "formik";
 import * as yup from "yup";
+import {Error} from "../styles/Checkout.styled";
 import {
     RegisterButtonStyle,
     RegisterFormStyle,
@@ -31,19 +32,7 @@ function Register() {
         });
     }
 
-    function onSubmitRegister(username, real_name, phone, password) {
-        setButtonActive(false);
-        registerUser(username, real_name, phone, password).then((data) => {
-            if (data.result === true) {
-                alert('You have successfully registered!');
-                setButtonActive(true);
-                history.push('/login');
-            } else if (data.result === 'username' || data.result === 'phone') {
-                alert(`User with such ${data.result} already exists!`);
-                setButtonActive(true);
-            }
-        });
-    }
+
     return (
         <MarginTopFromHeaderStyle>
             <ContainerStyle>
@@ -183,14 +172,14 @@ function Register() {
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Sign up</RegisterButtonStyle>
+                                                Login me</RegisterButtonStyle>
                                         ) : (
                                             <RegisterButtonStyle
                                                 disabled={true}
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Sign up</RegisterButtonStyle>
+                                                Login me</RegisterButtonStyle>
                                         )}
 
                                 </RegisterFormStyle>

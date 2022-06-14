@@ -7,9 +7,11 @@ import {
     ItemMainTextBlockStyle,
     ItemMainTextParagraphStyle,
     ItemMainTextTitleStyle,
+    ItemTextParagraphStyle
 } from "../styles/Item.styled";
 import LowBar from "../components/LowBar";
 import {getCarById} from "../api/api";
+import { createSelector } from '@reduxjs/toolkit';
 
 
 function Item({match}) {

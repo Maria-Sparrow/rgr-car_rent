@@ -798,7 +798,7 @@
         "kind": 2,
         "importPath": "backend.utils",
         "description": "backend.utils",
-        "peekOfCode": "def did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True\n    return False\ndef did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
+        "peekOfCode": "def did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True\n    return False\ndef did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return user['id']\n    return False",
         "detail": "backend.utils",
         "documentation": {}
     },
@@ -807,7 +807,7 @@
         "kind": 2,
         "importPath": "backend.utils",
         "description": "backend.utils",
-        "peekOfCode": "def did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
+        "peekOfCode": "def did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return user['id']\n    return False",
         "detail": "backend.utils",
         "documentation": {}
     },

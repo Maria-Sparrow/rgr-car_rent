@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {ContainerStyle, MarginTopFromHeaderStyle} from "../styles/General.styled";
 import * as yup from "yup";
 import {ErrorMessage, Form, Formik, Field} from "formik";
+import {Error} from "../styles/Checkout.styled";
 import {
     LoginButtonStyle,
     LoginFormStyle,

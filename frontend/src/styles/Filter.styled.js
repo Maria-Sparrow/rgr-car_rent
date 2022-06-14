@@ -18,4 +18,6 @@ export const FilterHr = styled.hr`
 export const FilterBlock = styled.div`
   display: flex;
   margin-right: 15px;
+  padding-top: 15px;
+  margin-top: 10px;
 `;
