@@ -15,9 +15,12 @@ import {loginUser} from "../api/api";
 import {loggedInKey} from "../constants/constants";
 import {useDispatch} from "react-redux";
 import {setAccess} from "../redux/accessSlice";
+import Cookies from 'universal-cookie';
 
 
 function Login() {
+const cookies = new Cookies()
+
 
     const dispatch = useDispatch();
     const [buttonActive, setButtonActive] = useState(true);
@@ -33,6 +36,7 @@ function Login() {
             if (data.loggedInValue) {
                 setButtonActive(true);
                 reRenderRouting(data);
+                cookies.set('username', username)
             } else {
                 alert('username or password is incorrect!')
                 setButtonActive(true);

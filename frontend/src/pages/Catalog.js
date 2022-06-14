@@ -16,6 +16,7 @@ function Catalog() {
     useEffect(() => {
         getCars().then(data => {
             getDeals().then((dealData) => {
+            console.log(dealData)
                 let rentedCarIds = dealData.deals.filter((deal) => deal.active).map((deal) => deal.car_id);
                 let tempCars = data.cars.filter((car) => !rentedCarIds.includes(car.id))
                 setCars(tempCars)
