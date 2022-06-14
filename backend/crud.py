@@ -1,6 +1,6 @@
 from sqlalchemy.orm import relationship
 
-from backend.classes.model.admin import Admin
+from classes.model.admin import Admin
 from classes.model.deal import Deal
 from classes.model.car import Car
 from classes.model.fine import Fine
@@ -269,6 +269,7 @@ def check_logged_user_in():
 
     return jsonify({'result': result})
 
+
 @app.route("/user", methods=["GET"])
 @cross_origin()
 def get_users():
@@ -291,22 +292,36 @@ def get_users():
 #
 #     return jsonify({'result': user_id})
 
+
+def get_user_id_by_username(username: str):
+    users = RestUser.query.all()
+    user_id = None
+    for user in users:
+        if user.username == username:
+            user_id = user.id
+    return user_id
+
+
 @app.route("/deal", methods=["GET"])
 @cross_origin()
 def get_deals():
-    deals = RestDeal.query.all()
-    users = RestUser.query.all()
-    user_massive = []
-    for user in users:
+    args = request.args.to_dict()
+    username = args.get('username')
+
+    print(username)
+    user_id = get_user_id_by_username(username)
+    print(user_id)
+    deals = []
+    if user_id:
+        deals = RestDeal.query.all()
         deal_massive = []
         for deal in deals:
-            if deal.user_id == user.id:
+            if deal.user_id == user_id:
                  deal_massive.append(deal)
-        user_massive.append(deal_massive)
-        deal_massive.pop()
-    result = deals_schema.dump(user_massive)
+        result = deals_schema.dump(deal_massive)
+        deals = result
 
-    return jsonify({'deals': result})
+    return jsonify({'deals': deals})
 
 
 @app.route("/deal/<id>", methods=["GET"])
@@ -331,13 +346,16 @@ def add_deal():
 
 @app.route("/deal/register", methods=["POST"])
 def register_deal():
+    args = request.args.to_dict()
+    username = args.get('username')
+    user_id = get_user_id_by_username(username)
+
     result = True
     date_now = datetime.datetime.now()
-    user = RestUser.query.get(1)
     # if check_logged_user_in():
     #     user_id = check_user_id()
     car = RestCar.query.get(request.json['car_id'])
-    user_id = user.id
+
     car_id = car.id
     active = True
     new_deal = RestDeal(date_now, request.json['price'], request.json['rent_time'],
@@ -436,10 +454,6 @@ def delete_fine(id):
     db.session.delete(fine)
     db.session.commit()
     return fine_schema.jsonify(fine)
-
-
-
-
 
 
 
