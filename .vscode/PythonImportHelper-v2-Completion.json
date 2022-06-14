@@ -1,0 +1,841 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Deal",
+        "importPath": "classes.model.deal",
+        "description": "classes.model.deal",
+        "isExtraImport": true,
+        "detail": "classes.model.deal",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "importPath": "classes.model.car",
+        "description": "classes.model.car",
+        "isExtraImport": true,
+        "detail": "classes.model.car",
+        "documentation": {}
+    },
+    {
+        "label": "Fine",
+        "importPath": "classes.model.fine",
+        "description": "classes.model.fine",
+        "isExtraImport": true,
+        "detail": "classes.model.fine",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "classes.model.user",
+        "description": "classes.model.user",
+        "isExtraImport": true,
+        "detail": "classes.model.user",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "filter_cars",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "can_user_be_logged_in",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "\\",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Marshmallow",
+        "importPath": "flask_marshmallow",
+        "description": "flask_marshmallow",
+        "isExtraImport": true,
+        "detail": "flask_marshmallow",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "cross_origin",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "ABCMeta",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultSort",
+        "importPath": "sorting",
+        "description": "sorting",
+        "isExtraImport": true,
+        "detail": "sorting",
+        "documentation": {}
+    },
+    {
+        "label": "SortByPrice",
+        "importPath": "sorting",
+        "description": "sorting",
+        "isExtraImport": true,
+        "detail": "sorting",
+        "documentation": {}
+    },
+    {
+        "label": "SortByYear",
+        "importPath": "sorting",
+        "description": "sorting",
+        "isExtraImport": true,
+        "detail": "sorting",
+        "documentation": {}
+    },
+    {
+        "label": "Sorting",
+        "importPath": "sorting",
+        "description": "sorting",
+        "isExtraImport": true,
+        "detail": "sorting",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "backend.classes.model.car",
+        "description": "backend.classes.model.car",
+        "peekOfCode": "class Car:\n    def __init__(self, img, title: 'title', brand=\"zaporozhec\", year = 1990, price_in_USD=0):\n        self.img = img\n        self.title = title\n        self.brand = brand\n        self.year =year\n        self.price_in_USD = price_in_USD",
+        "detail": "backend.classes.model.car",
+        "documentation": {}
+    },
+    {
+        "label": "Deal",
+        "kind": 6,
+        "importPath": "backend.classes.model.deal",
+        "description": "backend.classes.model.deal",
+        "peekOfCode": "class Deal:\n    def __init__(self, deal_date=datetime.now(), deal_price=12000, rent_time=45, collateral_amount=2000,\n                 user_id=1,\n                 car_id=1,\n                 active = True\n                 ):\n        self.date = deal_date\n        self.price = deal_price\n        self.rent_time = rent_time\n        self.collateral_amount = collateral_amount",
+        "detail": "backend.classes.model.deal",
+        "documentation": {}
+    },
+    {
+        "label": "Fine",
+        "kind": 6,
+        "importPath": "backend.classes.model.fine",
+        "description": "backend.classes.model.fine",
+        "peekOfCode": "class Fine:\n    def __init__(self, fine_price=2000, pay_time=5,deal_id=1):\n        self.fine_price = fine_price\n        self.pay_time = pay_time\n        self.deal_id = deal_id",
+        "detail": "backend.classes.model.fine",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "backend.classes.model.user",
+        "description": "backend.classes.model.user",
+        "peekOfCode": "class User:\n    def __init__(self, username, real_name, phone, password, logged_in_value):\n        self.username = username\n        self.real_name = real_name\n        self.phone = phone\n        self.password = password\n        self.logged_in_value = logged_in_value",
+        "detail": "backend.classes.model.user",
+        "documentation": {}
+    },
+    {
+        "label": "price_constants",
+        "kind": 5,
+        "importPath": "backend.constants",
+        "description": "backend.constants",
+        "peekOfCode": "price_constants = {\n    'default': \"default\",\n    'asc': \"ascending\",\n    'desc': \"descending\"\n};\nyear_constants = {\n    'default': \"default\",\n    'asc': \"ascending\",\n    'desc': \"descending\"\n};",
+        "detail": "backend.constants",
+        "documentation": {}
+    },
+    {
+        "label": "year_constants",
+        "kind": 5,
+        "importPath": "backend.constants",
+        "description": "backend.constants",
+        "peekOfCode": "year_constants = {\n    'default': \"default\",\n    'asc': \"ascending\",\n    'desc': \"descending\"\n};",
+        "detail": "backend.constants",
+        "documentation": {}
+    },
+    {
+        "label": "RestCar",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)\n    price_in_USD = db.Column(db.Float, unique=False)\n    deals = db.relationship(\"RestDeal\", backref=\"rest_car\")\n    def __init__(self, img, title, brand, year, price_in_USD):\n        super().__init__(img, title, brand, year, price_in_USD)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "CarShema",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class CarShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'img', 'title', 'brand', 'year',\n                  'price_in_USD')\ncar_schema = CarShema()\ncars_schema = CarShema(many=True)\n@app.route(\"/car\", methods=[\"GET\"])\n@cross_origin()\ndef get_cars():\n    cars = RestCar.query.all()",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "RestUser",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class RestUser(User, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(45), unique=True)\n    real_name = db.Column(db.String(45), unique=False)\n    phone = db.Column(db.String(45), unique=True)\n    password = db.Column(db.String(45), unique=False)\n    logged_in_value = db.Column(db.Text, unique=False)\n    deals = db.relationship(\"RestDeal\", backref=\"rest_user\")\n    def __init__(self, username, real_name, phone, password, logged_in_value):\n        super().__init__(username, real_name, phone, password, logged_in_value)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "UserShema",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class UserShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'username', 'real_name', 'phone', 'password', 'logged_in_value')\nuser_schema = UserShema()\nusers_schema = UserShema(many=True)\nclass RestDeal(Deal, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    date = db.Column(db.Date, unique=False)\n    price = db.Column(db.Integer, unique=False)\n    rent_time = db.Column(db.Integer, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "RestDeal",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class RestDeal(Deal, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    date = db.Column(db.Date, unique=False)\n    price = db.Column(db.Integer, unique=False)\n    rent_time = db.Column(db.Integer, unique=False)\n    collateral_amount = db.Column(db.Integer, unique=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('rest_user.id'))  # important\n    car_id = db.Column(db.Integer, db.ForeignKey('rest_car.id'))  # important\n    active = db.Column(db.Boolean, unique=False)\n    fine_paid = db.Column(db.Boolean, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "DealShema",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class DealShema(ma.Schema):\n    class Meta:\n        fields = ('active', 'collateral_amount', 'date', 'car_id','fine_paid', 'id', 'price', 'rent_time', 'user_id')\ndeal_schema = DealShema()\ndeals_schema = DealShema(many=True)\nclass RestFine(Fine, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    fine_price = db.Column(db.Integer, unique=False)\n    pay_time = db.Column(db.Integer, unique=False)\n    deal_id = db.Column(db.Integer, db.ForeignKey('rest_deal.id'))",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "RestFine",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class RestFine(Fine, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    fine_price = db.Column(db.Integer, unique=False)\n    pay_time = db.Column(db.Integer, unique=False)\n    deal_id = db.Column(db.Integer, db.ForeignKey('rest_deal.id'))\n    def __init__(self, fine_price, pay_time, deal_id):\n        super().__init__(fine_price, pay_time, deal_id)\nclass FineShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'fine_price', 'pay_time', 'deal_id')",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "FineShema",
+        "kind": 6,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "class FineShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'fine_price', 'pay_time', 'deal_id')\nfine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_cars",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_cars():\n    cars = RestCar.query.all()\n    result = cars_schema.dump(cars)\n    return jsonify({'cars': result})\n@app.route(\"/car/filter\", methods=[\"GET\"])\n@cross_origin()\ndef get_filtered_car():\n    cars = RestCar.query.all()\n    cars = cars_schema.dump(cars)\n    price = request.args.get('price')",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_filtered_car",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_filtered_car():\n    cars = RestCar.query.all()\n    cars = cars_schema.dump(cars)\n    price = request.args.get('price')\n    year = request.args.get('year')\n    result = filter_cars(price, year, cars)\n    return jsonify({'cars': result})\n@app.route(\"/car/<id>\", methods=[\"GET\"])\n@cross_origin()\ndef get_car(id):",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_car",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_car(id):\n    car = RestCar.query.get(id)\n    if not car:\n        abort(404)\n    return car_schema.jsonify(car)\n@app.route(\"/car\", methods=[\"POST\"])\n# @cross_origin()\ndef add_car():\n    new_car = RestCar(request.json['img'], request.json['title'],\n                                request.json['brand'], request.json['year'],",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "add_car",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def add_car():\n    new_car = RestCar(request.json['img'], request.json['title'],\n                                request.json['brand'], request.json['year'],\n                                 request.json['price_in_USD'])\n    db.session.add(new_car)\n    db.session.commit()\n    return car_schema.jsonify(new_car)\n@app.route(\"/car/<id>\", methods=[\"PUT\"])\n# @cross_origin()\ndef update_car(id):",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "update_car",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def update_car(id):\n    car = RestCar.query.get(id)\n    if not car:\n        abort(404)\n    old_car = copy.deepcopy(car)\n    car.img = request.json['img']\n    car.title = request.json['title']\n    car.title = request.json['brand']\n    car.title = request.json['year']\n    car.price_in_USD = request.json['price_in_USD']",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "delete_car",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def delete_car(id):\n    car = RestCar.query.get(id)\n    if not car:\n        abort(404)\n    db.session.delete(car)\n    db.session.commit()\n    return car_schema.jsonify(car)\nclass RestUser(User, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(45), unique=True)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])\n@cross_origin()\ndef register_user():\n    data = request.json",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def register_user():\n    data = request.json\n    users = RestUser.query.all()\n    users_schema = UserShema(many=True, only=['username', 'phone'])\n    users = users_schema.dump(users)\n    exists = does_user_exists(data['username'], data['phone'], users)\n    if exists:\n        result = exists\n    else:\n        result = True",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "check_logged_user_in",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def check_logged_user_in():\n    logged_in_value = request.json['loggedInValue']\n    if logged_in_value == None:\n        result = False\n    else:\n        users = RestUser.query.all()\n        users_schema = UserShema(many=True, only=['logged_in_value'])\n        users = users_schema.dump(users)\n        result = did_user_login(logged_in_value, users)\n    return jsonify({'result': result})",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_deals",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_deals():\n    deals = RestDeal.query.all()\n    result = deals_schema.dump(deals)\n    return jsonify({'deals': result})\n@app.route(\"/deal/<id>\", methods=[\"GET\"])\n@cross_origin()\ndef get_deal(id):\n    deal = RestDeal.query.get(id)\n    if not deal:\n        abort(404)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_deal",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_deal(id):\n    deal = RestDeal.query.get(id)\n    if not deal:\n        abort(404)\n    return deal_schema.jsonify(deal)\n@app.route(\"/deal\", methods=[\"POST\"])\n# @cross_origin()\ndef add_deal():\n    new_deal = RestDeal(request.json['date'], request.json['price'], request.json['rent_time'],\n                        request.json['collateral_amount'], request.json['user_id'], request.json['car_id'],",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "add_deal",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def add_deal():\n    new_deal = RestDeal(request.json['date'], request.json['price'], request.json['rent_time'],\n                        request.json['collateral_amount'], request.json['user_id'], request.json['car_id'],\n                        request.json['active'])\n    db.session.add(new_deal)\n    db.session.commit()\n    return deal_schema.jsonify(new_deal)\n@app.route(\"/deal/register\", methods=[\"POST\"])\ndef register_deal():\n    # data = request.json",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "register_deal",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def register_deal():\n    # data = request.json\n    # deals = RestDeal.query.all()\n    # deals_schema = DealShema(many=True)\n    # deals = users_schema.dump(deals)\n    result = True\n    date_now = datetime.datetime.now()\n    user = RestUser.query.get(1)\n    # if check_logged_user_in():\n    #     user_id = check_user_id()",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "update_deal",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def update_deal(id):\n    deal = RestDeal.query.get(id)\n    if not deal:\n        abort(404)\n    old_deal = copy.deepcopy(deal)\n    deal.date = request.json['date']\n    deal.price = request.json['price']\n    deal.rent_time = request.json['rent_time']\n    deal.collateral_amount = request.json['collateral_amount']\n    deal.user_id = request.json['user_id']",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "delete_deal",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def delete_deal(id):\n    deal = RestDeal.query.get(id)\n    if not deal:\n        abort(404)\n    db.session.delete(deal)\n    db.session.commit()\n    return deal_schema.jsonify(deal)\n@app.route(\"/fine\", methods=[\"GET\"])\n@cross_origin()\ndef get_fines():",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_fines",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_fines():\n    fines = RestFine.query.all()\n    result = fines_schema.dump(fines)\n    return jsonify({'deals': result})\n@app.route(\"/fine/<id>\", methods=[\"GET\"])\n@cross_origin()\ndef get_fine(id):\n    fine = RestFine.query.get(id)\n    if not fine:\n        abort(404)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "get_fine",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_fine(id):\n    fine = RestFine.query.get(id)\n    if not fine:\n        abort(404)\n    return fine_schema.jsonify(fine)\n@app.route(\"/fine\", methods=[\"POST\"])\n# @cross_origin()\ndef add_fine():\n    deal = RestDeal.query.get(1)\n    deal_id = deal.id",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "add_fine",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def add_fine():\n    deal = RestDeal.query.get(1)\n    deal_id = deal.id\n    new_fine = RestFine(request.json['fine_price'],\n                        request.json['pay_time'],\n                        deal_id)\n    db.session.add(new_fine)\n    db.session.commit()\n    return fine_schema.jsonify(new_fine)\n@app.route(\"/fine/<id>\", methods=[\"PUT\"])",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "update_fine",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def update_fine(id):\n    fine = RestFine.query.get(id)\n    if not fine:\n        abort(404)\n    old_fine = copy.deepcopy(fine)\n    fine.fine_price = request.json['fine_price']\n    fine.pay_time = request.json['pay_time']\n    fine.pay_time = request.json['deal_id']\n    db.session.commit()\n    return fine_schema.jsonify(old_fine)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "delete_fine",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def delete_fine(id):\n    fine = RestFine.query.get(id)\n    if not fine:\n        abort(404)\n    db.session.delete(fine)\n    db.session.commit()\n    return fine_schema.jsonify(fine)\nif __name__ == \"__main__\":\n    db.create_all()\n    app.run(debug=True, host='127.0.0.1')",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URI",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "DB_URI = \"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{db}\".format(\n    user=SECRET[\"user\"],\n    password=SECRET[\"password\"],\n    host=SECRET[\"host\"],\n    port=SECRET[\"port\"],\n    db=SECRET[\"db\"],\n)\napp = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS']",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "cors",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "cors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['CORS_HEADERS']",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)\n    price_in_USD = db.Column(db.Float, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "db = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)\n    price_in_USD = db.Column(db.Float, unique=False)\n    deals = db.relationship(\"RestDeal\", backref=\"rest_car\")",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "ma",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "ma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)\n    price_in_USD = db.Column(db.Float, unique=False)\n    deals = db.relationship(\"RestDeal\", backref=\"rest_car\")\n    def __init__(self, img, title, brand, year, price_in_USD):",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "car_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "car_schema = CarShema()\ncars_schema = CarShema(many=True)\n@app.route(\"/car\", methods=[\"GET\"])\n@cross_origin()\ndef get_cars():\n    cars = RestCar.query.all()\n    result = cars_schema.dump(cars)\n    return jsonify({'cars': result})\n@app.route(\"/car/filter\", methods=[\"GET\"])\n@cross_origin()",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "cars_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "cars_schema = CarShema(many=True)\n@app.route(\"/car\", methods=[\"GET\"])\n@cross_origin()\ndef get_cars():\n    cars = RestCar.query.all()\n    result = cars_schema.dump(cars)\n    return jsonify({'cars': result})\n@app.route(\"/car/filter\", methods=[\"GET\"])\n@cross_origin()\ndef get_filtered_car():",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "user_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "user_schema = UserShema()\nusers_schema = UserShema(many=True)\nclass RestDeal(Deal, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    date = db.Column(db.Date, unique=False)\n    price = db.Column(db.Integer, unique=False)\n    rent_time = db.Column(db.Integer, unique=False)\n    collateral_amount = db.Column(db.Integer, unique=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('rest_user.id'))  # important\n    car_id = db.Column(db.Integer, db.ForeignKey('rest_car.id'))  # important",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "users_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "users_schema = UserShema(many=True)\nclass RestDeal(Deal, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    date = db.Column(db.Date, unique=False)\n    price = db.Column(db.Integer, unique=False)\n    rent_time = db.Column(db.Integer, unique=False)\n    collateral_amount = db.Column(db.Integer, unique=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('rest_user.id'))  # important\n    car_id = db.Column(db.Integer, db.ForeignKey('rest_car.id'))  # important\n    active = db.Column(db.Boolean, unique=False)",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "deal_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "deal_schema = DealShema()\ndeals_schema = DealShema(many=True)\nclass RestFine(Fine, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    fine_price = db.Column(db.Integer, unique=False)\n    pay_time = db.Column(db.Integer, unique=False)\n    deal_id = db.Column(db.Integer, db.ForeignKey('rest_deal.id'))\n    def __init__(self, fine_price, pay_time, deal_id):\n        super().__init__(fine_price, pay_time, deal_id)\nclass FineShema(ma.Schema):",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "deals_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "deals_schema = DealShema(many=True)\nclass RestFine(Fine, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    fine_price = db.Column(db.Integer, unique=False)\n    pay_time = db.Column(db.Integer, unique=False)\n    deal_id = db.Column(db.Integer, db.ForeignKey('rest_deal.id'))\n    def __init__(self, fine_price, pay_time, deal_id):\n        super().__init__(fine_price, pay_time, deal_id)\nclass FineShema(ma.Schema):\n    class Meta:",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "fine_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "fine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "fines_schema",
+        "kind": 5,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "fines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
+        "label": "Sorting",
+        "kind": 6,
+        "importPath": "backend.sorting",
+        "description": "backend.sorting",
+        "peekOfCode": "class Sorting:\n    def __init__(self):\n        self.comparator = DefaultSort()\n    def sort(self, data, asc):\n        return self.comparator.execute(data,asc)\nclass ISortBy(metaclass=ABCMeta):\n    @abstractmethod\n    def execute(self, data):\n        pass\nclass SortByYear(ISortBy):",
+        "detail": "backend.sorting",
+        "documentation": {}
+    },
+    {
+        "label": "ISortBy",
+        "kind": 6,
+        "importPath": "backend.sorting",
+        "description": "backend.sorting",
+        "peekOfCode": "class ISortBy(metaclass=ABCMeta):\n    @abstractmethod\n    def execute(self, data):\n        pass\nclass SortByYear(ISortBy):\n    def execute(self, data, asc):\n        return sorted(data, key=lambda x: x[\"year\"], reverse=(not asc))\nclass SortByPrice(ISortBy):\n    def execute(self, data, asc):\n        return sorted(data, key=lambda x: x[\"price_in_USD\"], reverse=(not asc))",
+        "detail": "backend.sorting",
+        "documentation": {}
+    },
+    {
+        "label": "SortByYear",
+        "kind": 6,
+        "importPath": "backend.sorting",
+        "description": "backend.sorting",
+        "peekOfCode": "class SortByYear(ISortBy):\n    def execute(self, data, asc):\n        return sorted(data, key=lambda x: x[\"year\"], reverse=(not asc))\nclass SortByPrice(ISortBy):\n    def execute(self, data, asc):\n        return sorted(data, key=lambda x: x[\"price_in_USD\"], reverse=(not asc))\nclass DefaultSort(ISortBy):\n    def execute(self, data,asc):\n        return data",
+        "detail": "backend.sorting",
+        "documentation": {}
+    },
+    {
+        "label": "SortByPrice",
+        "kind": 6,
+        "importPath": "backend.sorting",
+        "description": "backend.sorting",
+        "peekOfCode": "class SortByPrice(ISortBy):\n    def execute(self, data, asc):\n        return sorted(data, key=lambda x: x[\"price_in_USD\"], reverse=(not asc))\nclass DefaultSort(ISortBy):\n    def execute(self, data,asc):\n        return data",
+        "detail": "backend.sorting",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultSort",
+        "kind": 6,
+        "importPath": "backend.sorting",
+        "description": "backend.sorting",
+        "peekOfCode": "class DefaultSort(ISortBy):\n    def execute(self, data,asc):\n        return data",
+        "detail": "backend.sorting",
+        "documentation": {}
+    },
+    {
+        "label": "price_comparator",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def price_comparator(element):\n    return element['price_in_USD']\ndef year_comparator(element):\n    return element['year']\n# def filter_cars(brand: str, year: str, price: str, cars: list):\n#     if len(cars) == 0:\n#         return []\n#     if price == price_constants['asc']:\n#         cars.sort(key=price_comparator)\n#     elif price == price_constants['desc']:",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "year_comparator",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def year_comparator(element):\n    return element['year']\n# def filter_cars(brand: str, year: str, price: str, cars: list):\n#     if len(cars) == 0:\n#         return []\n#     if price == price_constants['asc']:\n#         cars.sort(key=price_comparator)\n#     elif price == price_constants['desc']:\n#         cars.sort(key=price_comparator, reverse=True)\n#     if year == year_constants['asc']:",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "filter_cars",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def filter_cars(price: str, year: str, cars: list):\n    sorting = Sorting()\n    if len(cars) == 0:\n        return []\n    if price in (\"ascending\", \"descending\"):\n        sorting.comparator = by_price\n        cars = sorting.sort(cars, price == \"ascending\")\n    elif year in (\"ascending\", \"descending\"):\n        sorting.comparator = by_year\n        cars = sorting.sort(cars, year == \"ascending\")",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "can_user_be_logged_in",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def can_user_be_logged_in(username: str, password: str, users: list):\n    if len(users) == 0:\n        return False\n    for user in users:\n        if user['username'] == username and user['password'] == password:\n            return user['logged_in_value']\n    return False\ndef does_user_exists(username: str, phone: str, users: list):\n    if len(users) == 0:\n        return False",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "does_user_exists",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def does_user_exists(username: str, phone: str, users: list):\n    if len(users) == 0:\n        return False\n    for user in users:\n        if user['username'] == username:\n            return 'username'\n    for user in users:\n        if user['phone'] == phone:\n            return 'phone'\n    return False",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_logged_in_value",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def generate_logged_in_value(username: str):\n    characters = string.ascii_letters + string.digits\n    logged_in_value = username\n    while len(logged_in_value) < 100:\n        logged_in_value = logged_in_value + random.choice(characters)\n    return logged_in_value\ndef did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "did_user_login",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True\n    return False\ndef did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "did_user_is_logged",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "by_default",
+        "kind": 5,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "by_default = DefaultSort()\nby_price = SortByPrice()\nby_year = SortByYear()\ndef filter_cars(price: str, year: str, cars: list):\n    sorting = Sorting()\n    if len(cars) == 0:\n        return []\n    if price in (\"ascending\", \"descending\"):\n        sorting.comparator = by_price\n        cars = sorting.sort(cars, price == \"ascending\")",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "by_price",
+        "kind": 5,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "by_price = SortByPrice()\nby_year = SortByYear()\ndef filter_cars(price: str, year: str, cars: list):\n    sorting = Sorting()\n    if len(cars) == 0:\n        return []\n    if price in (\"ascending\", \"descending\"):\n        sorting.comparator = by_price\n        cars = sorting.sort(cars, price == \"ascending\")\n    elif year in (\"ascending\", \"descending\"):",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "by_year",
+        "kind": 5,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "by_year = SortByYear()\ndef filter_cars(price: str, year: str, cars: list):\n    sorting = Sorting()\n    if len(cars) == 0:\n        return []\n    if price in (\"ascending\", \"descending\"):\n        sorting.comparator = by_price\n        cars = sorting.sort(cars, price == \"ascending\")\n    elif year in (\"ascending\", \"descending\"):\n        sorting.comparator = by_year",
+        "detail": "backend.utils",
+        "documentation": {}
+    }
+]
