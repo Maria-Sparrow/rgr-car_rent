@@ -1,5 +1,6 @@
 from sqlalchemy.orm import relationship
 
+from backend.classes.model.admin import Admin
 from classes.model.deal import Deal
 from classes.model.car import Car
 from classes.model.fine import Fine
@@ -200,6 +201,28 @@ class FineShema(ma.Schema):
 fine_schema = FineShema()
 fines_schema = FineShema(many=True)
 
+class RestAdmin(Admin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(45), unique=True)
+    real_name = db.Column(db.String(45), unique=False)
+    phone = db.Column(db.String(45), unique=True)
+    password = db.Column(db.String(45), unique=False)
+    logged_in_value = db.Column(db.Text, unique=False)
+
+    def __init__(self, username, real_name, phone, password, logged_in_value):
+        super().__init__(username, real_name, phone, password, logged_in_value)
+
+
+class AdminShema(ma.Schema):
+    class Meta:
+        fields = ('id', 'username', 'real_name', 'phone', 'password', 'logged_in_value')
+
+
+admin_schema = AdminShema()
+
+
+
+
 @app.route("/user/login", methods=["POST"])
 @cross_origin()
 def login_user():
@@ -246,7 +269,12 @@ def check_logged_user_in():
 
     return jsonify({'result': result})
 
-
+@app.route("/user", methods=["GET"])
+@cross_origin()
+def get_users():
+    users = RestUser.query.all()
+    result = users_schema.dump(users)
+    return jsonify({'users': result})
 # @app.route("/user/check_user_id", methods=["POST"])
 # @cross_origin()
 # def check_user_id():
@@ -267,7 +295,17 @@ def check_logged_user_in():
 @cross_origin()
 def get_deals():
     deals = RestDeal.query.all()
-    result = deals_schema.dump(deals)
+    users = RestUser.query.all()
+    user_massive = []
+    for user in users:
+        deal_massive = []
+        for deal in deals:
+            if deal.user_id == user.id:
+                 deal_massive.append(deal)
+        user_massive.append(deal_massive)
+        deal_massive.pop()
+    result = deals_schema.dump(user_massive)
+
     return jsonify({'deals': result})
 
 
@@ -293,12 +331,7 @@ def add_deal():
 
 @app.route("/deal/register", methods=["POST"])
 def register_deal():
-    # data = request.json
-    # deals = RestDeal.query.all()
-    # deals_schema = DealShema(many=True)
-    # deals = users_schema.dump(deals)
     result = True
-
     date_now = datetime.datetime.now()
     user = RestUser.query.get(1)
     # if check_logged_user_in():
@@ -403,6 +436,12 @@ def delete_fine(id):
     db.session.delete(fine)
     db.session.commit()
     return fine_schema.jsonify(fine)
+
+
+
+
+
+
 
 
 if __name__ == "__main__":

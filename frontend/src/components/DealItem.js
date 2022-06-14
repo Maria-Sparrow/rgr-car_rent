@@ -8,6 +8,8 @@ import {
     DealItemPriceStyle,
     DealItemTitleStyle
 } from "../styles/DealItem.styled";
+import {useDispatch} from "react-redux";
+import {decrementQuantity, deleteItemFromDeal, incrementQuantity} from "../redux/dealSlice";
 import { updateDeal } from '../api/api';
 
 function DealItem({item, setDealItems, dealItems}) {

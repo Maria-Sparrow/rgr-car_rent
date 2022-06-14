@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {ContainerStyle, MarginTopFromHeaderStyle} from "../styles/General.styled";
 import {ErrorMessage, Form, Formik, Field} from "formik";
 import * as yup from "yup";
+import {Error} from "../styles/Checkout.styled";
 import {
     RegisterButtonStyle,
     RegisterFormStyle,
@@ -183,14 +184,14 @@ function Register() {
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Sign up</RegisterButtonStyle>
+                                                Login me</RegisterButtonStyle>
                                         ) : (
                                             <RegisterButtonStyle
                                                 disabled={true}
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Sign up</RegisterButtonStyle>
+                                                Login me</RegisterButtonStyle>
                                         )}
 
                                 </RegisterFormStyle>

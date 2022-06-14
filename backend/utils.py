@@ -104,3 +104,8 @@ def did_user_is_logged(logged_in_value: str, users: list):
         if user['logged_in_value'] == logged_in_value:
             return ['user.id']
     return False
+
+#
+# def find_current_user():
+#     if did_user_is_logged():
+#         return ['user.id']

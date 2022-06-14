@@ -75,7 +75,7 @@ function Deal() {
                     <MarginTopFromHeaderStyle>
                         <ContainerStyle>
 
-                            <DealTitleStyle>Deals</DealTitleStyle>
+                            <DealTitleStyle>Shopping Deal</DealTitleStyle>
                             <DealItemsBlockStyle>
                                 <DealItemsUlStyle>
                                     {dealItems.map((item) => {
