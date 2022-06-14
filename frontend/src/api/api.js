@@ -1,4 +1,5 @@
 import axios from "axios";
+import Cookies from 'universal-cookie';
 
 
 const instance = axios.create({
@@ -8,6 +9,8 @@ const instance = axios.create({
         "Access-Control-Allow-Origin": "*",
     }
 });
+
+const cookies = new Cookies();
 
 export async function getCars() {
     // await delay(500);
@@ -45,22 +48,29 @@ export async function didUserLogin(loggedInValue) {
     return (await instance.post(`/user/check_logged_in`, {loggedInValue: loggedInValue})).data;
 }
 
-
-
 export async function registerDeal(carId, price, rent_time, collateral_amount) {
     // await delay(3000);
-    return (await instance.post(`/deal/register`, {car_id:carId, price: price,
+    const cookies = new Cookies();
+    let username = cookies.get('username');
+    let url = '/deal/register?username=' + username;
+    console.log(url);
+    return (await instance.post(url, {car_id:carId, price: price,
         rent_time:rent_time, collateral_amount: collateral_amount })).data;
 }
 
 export async function getDeals() {
     // await delay(500);
-    return (await instance.get('/deal')).data;
+    let username = cookies.get('username');
+    let url = '/deal?username=' + username;
+    let a =  (await instance.get(url)).data;
+    return a;
 }
 
 export async function getDealData() {
     // await delay(500);
-    return (await instance.get('/deal')).data;
+    let username = cookies.get('username');
+    let url = '/deal?username=' + username;
+    return (await instance.get(url)).data;
 }
 
 export async function updateDeal(id, deal) {

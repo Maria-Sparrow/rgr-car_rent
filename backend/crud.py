@@ -247,12 +247,35 @@ def check_logged_user_in():
     return jsonify({'result': result})
 
 
+def get_user_id_by_username(username: str):
+    users = RestUser.query.all()
+    user_id = None
+    for user in users:
+        if user.username == username:
+            user_id = user.id
+    return user_id
+
+
 @app.route("/deal", methods=["GET"])
 @cross_origin()
 def get_deals():
-    deals = RestDeal.query.all()
-    result = deals_schema.dump(deals)
-    return jsonify({'deals': result})
+    args = request.args.to_dict()
+    username = args.get('username')
+
+    print(username)
+    user_id = get_user_id_by_username(username)
+    print(user_id)
+    deals = []
+    if user_id:
+        deals = RestDeal.query.all()
+        deal_massive = []
+        for deal in deals:
+            if deal.user_id == user_id:
+                 deal_massive.append(deal)
+        result = deals_schema.dump(deal_massive)
+        deals = result
+
+    return jsonify({'deals': deals})
 
 
 @app.route("/deal/<id>", methods=["GET"])
@@ -277,18 +300,16 @@ def add_deal():
 
 @app.route("/deal/register", methods=["POST"])
 def register_deal():
-    # data = request.json
-    # deals = RestDeal.query.all()
-    # deals_schema = DealShema(many=True)
-    # deals = users_schema.dump(deals)
-    result = True
+    args = request.args.to_dict()
+    username = args.get('username')
+    user_id = get_user_id_by_username(username)
 
+    result = True
     date_now = datetime.datetime.now()
-    user = RestUser.query.get(1)
     # if check_logged_user_in():
     #     user_id = check_user_id()
     car = RestCar.query.get(request.json['car_id'])
-    user_id = user.id
+
     car_id = car.id
     active = True
     new_deal = RestDeal(date_now, request.json['price'], request.json['rent_time'],
