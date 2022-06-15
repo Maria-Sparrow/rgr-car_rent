@@ -120,14 +120,14 @@ function Login() {
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Login me</LoginButtonStyle>
+                                                Log in</LoginButtonStyle>
                                         ) : (
                                             <LoginButtonStyle
                                                 disabled={true}
                                                 onClick={handleSubmit}
                                                 type='submit'
                                                 variant="outline-info">
-                                                Login me</LoginButtonStyle>
+                                                Log in</LoginButtonStyle>
                                         )}
 
                                 </LoginFormStyle>

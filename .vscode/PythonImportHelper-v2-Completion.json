@@ -366,7 +366,7 @@
         "kind": 6,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "class FineShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'fine_price', 'pay_time', 'deal_id')\nfine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)",
+        "peekOfCode": "class FineShema(ma.Schema):\n    class Meta:\n        fields = ('id', 'fine_price', 'pay_time', 'deal_id')\nfine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n# @cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -429,7 +429,7 @@
         "kind": 2,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "def login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])\n@cross_origin()\ndef register_user():\n    data = request.json",
+        "peekOfCode": "def login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])\n# @cross_origin()\ndef register_user():\n    data = request.json",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -452,11 +452,20 @@
         "documentation": {}
     },
     {
+        "label": "get_user_id_by_username",
+        "kind": 2,
+        "importPath": "backend.crud",
+        "description": "backend.crud",
+        "peekOfCode": "def get_user_id_by_username(username: str):\n    users = RestUser.query.all()\n    user_id = None\n    for user in users:\n        if user.username == username:\n            user_id = user.id\n    return user_id\n@app.route(\"/deal\", methods=[\"GET\"])\n@cross_origin()\ndef get_deals():",
+        "detail": "backend.crud",
+        "documentation": {}
+    },
+    {
         "label": "get_deals",
         "kind": 2,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "def get_deals():\n    deals = RestDeal.query.all()\n    result = deals_schema.dump(deals)\n    return jsonify({'deals': result})\n@app.route(\"/deal/<id>\", methods=[\"GET\"])\n@cross_origin()\ndef get_deal(id):\n    deal = RestDeal.query.get(id)\n    if not deal:\n        abort(404)",
+        "peekOfCode": "def get_deals():\n    args = request.args.to_dict()\n    username = args.get('username')\n    print(username)\n    user_id = get_user_id_by_username(username)\n    print(user_id)\n    deals = []\n    if user_id:\n        deals = RestDeal.query.all()\n        deal_massive = []",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -474,7 +483,7 @@
         "kind": 2,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "def add_deal():\n    new_deal = RestDeal(request.json['date'], request.json['price'], request.json['rent_time'],\n                        request.json['collateral_amount'], request.json['user_id'], request.json['car_id'],\n                        request.json['active'])\n    db.session.add(new_deal)\n    db.session.commit()\n    return deal_schema.jsonify(new_deal)\n@app.route(\"/deal/register\", methods=[\"POST\"])\ndef register_deal():\n    # data = request.json",
+        "peekOfCode": "def add_deal():\n    new_deal = RestDeal(request.json['date'], request.json['price'], request.json['rent_time'],\n                        request.json['collateral_amount'], request.json['user_id'], request.json['car_id'],\n                        request.json['active'])\n    db.session.add(new_deal)\n    db.session.commit()\n    return deal_schema.jsonify(new_deal)\n@app.route(\"/deal/register\", methods=[\"POST\"])\ndef register_deal():\n    args = request.args.to_dict()",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -483,7 +492,7 @@
         "kind": 2,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "def register_deal():\n    # data = request.json\n    # deals = RestDeal.query.all()\n    # deals_schema = DealShema(many=True)\n    # deals = users_schema.dump(deals)\n    result = True\n    date_now = datetime.datetime.now()\n    user = RestUser.query.get(1)\n    # if check_logged_user_in():\n    #     user_id = check_user_id()",
+        "peekOfCode": "def register_deal():\n    args = request.args.to_dict()\n    username = args.get('username')\n    user_id = get_user_id_by_username(username)\n    result = True\n    date_now = datetime.datetime.now()\n    # if check_logged_user_in():\n    #     user_id = check_user_id()\n    car = RestCar.query.get(request.json['car_id'])\n    car_id = car.id",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -564,7 +573,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\n# app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -573,7 +582,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI\napp.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\n# app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -582,7 +591,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)",
+        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False\ncors = CORS(app)\n# app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -591,16 +600,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "cors = CORS(app)\napp.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)",
-        "detail": "backend.crud",
-        "documentation": {}
-    },
-    {
-        "label": "app.config['CORS_HEADERS']",
-        "kind": 5,
-        "importPath": "backend.crud",
-        "description": "backend.crud",
-        "peekOfCode": "app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)\n    price_in_USD = db.Column(db.Float, unique=False)",
+        "peekOfCode": "cors = CORS(app)\n# app.config['CORS_HEADERS'] = 'Content-Type'\ndb = SQLAlchemy(app)\nma = Marshmallow(app)\nclass RestCar(Car, db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    img = db.Column(db.Text, unique=False)\n    title = db.Column(db.String(90), unique=False)\n    brand = db.Column(db.String(90), unique=False)\n    year = db.Column(db.Integer, unique=False)",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -681,7 +681,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "fine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})",
+        "peekOfCode": "fine_schema = FineShema()\nfines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n# @cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -690,7 +690,7 @@
         "kind": 5,
         "importPath": "backend.crud",
         "description": "backend.crud",
-        "peekOfCode": "fines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n@cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])",
+        "peekOfCode": "fines_schema = FineShema(many=True)\n@app.route(\"/user/login\", methods=[\"POST\"])\n# @cross_origin()\ndef login_user():\n    users = RestUser.query.all()\n    users = users_schema.dump(users)\n    data = request.json\n    result = can_user_be_logged_in(data['username'], data['password'], users)\n    return jsonify({'loggedInValue': result})\n@app.route(\"/user/register\", methods=[\"POST\"])",
         "detail": "backend.crud",
         "documentation": {}
     },
@@ -798,7 +798,7 @@
         "kind": 2,
         "importPath": "backend.utils",
         "description": "backend.utils",
-        "peekOfCode": "def did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True\n    return False\ndef did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return user['id']\n    return False",
+        "peekOfCode": "def did_user_login(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return True\n    return False\ndef did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
         "detail": "backend.utils",
         "documentation": {}
     },
@@ -807,7 +807,7 @@
         "kind": 2,
         "importPath": "backend.utils",
         "description": "backend.utils",
-        "peekOfCode": "def did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return user['id']\n    return False",
+        "peekOfCode": "def did_user_is_logged(logged_in_value: str, users: list):\n    for user in users:\n        if user['logged_in_value'] == logged_in_value:\n            return ['user.id']\n    return False",
         "detail": "backend.utils",
         "documentation": {}
     },

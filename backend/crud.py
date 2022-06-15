@@ -34,7 +34,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
@@ -201,7 +201,7 @@ fine_schema = FineShema()
 fines_schema = FineShema(many=True)
 
 @app.route("/user/login", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 def login_user():
     users = RestUser.query.all()
     users = users_schema.dump(users)
@@ -212,7 +212,7 @@ def login_user():
 
 
 @app.route("/user/register", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 def register_user():
     data = request.json
     users = RestUser.query.all()
@@ -233,7 +233,7 @@ def register_user():
 
 
 @app.route("/user/check_logged_in", methods=["POST"])
-@cross_origin()
+# @cross_origin()
 def check_logged_user_in():
     logged_in_value = request.json['loggedInValue']
     if logged_in_value == None:
@@ -271,13 +271,13 @@ def get_deals():
         deal_massive = []
         for deal in deals:
             if deal.user_id == user_id:
-                 deal_massive.append(deal)
+                deal_massive.append(deal)
         result = deals_schema.dump(deal_massive)
         deals = result
 
     return jsonify({'deals': deals})
 
-
+    
 @app.route("/deal/<id>", methods=["GET"])
 @cross_origin()
 def get_deal(id):
